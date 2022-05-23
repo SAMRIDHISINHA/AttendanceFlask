@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update/{{student.id}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" value="{{student.name}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="time" value="{{student.time}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="date" value="{{student.date}}" class="form-control">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
